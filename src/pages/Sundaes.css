@@ -1,0 +1,459 @@
+/* ================================
+   SWEETSPOT SUNDAES
+================================ */
+
+.sundaes-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(155, 38, 80, 0.2),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 90% 25%,
+      rgba(105, 18, 55, 0.2),
+      transparent 35%
+    ),
+    #170812;
+  color: #fff;
+}
+
+/* HERO */
+
+.sundaes-hero {
+  min-height: 440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 6%;
+  background:
+    linear-gradient(
+      rgba(22, 4, 14, 0.58),
+      rgba(22, 4, 14, 0.92)
+    ),
+    url("https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=1800&q=90")
+      center / cover;
+}
+
+.sundaes-hero-content {
+  max-width: 800px;
+}
+
+.sundaes-hero-content > span {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #e7a5bc;
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.sundaes-hero h1 {
+  margin: 0;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1.05;
+  font-weight: 500;
+}
+
+.sundaes-hero h1 em {
+  color: #f2b6c9;
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.sundaes-hero p {
+  max-width: 650px;
+  margin: 25px auto 0;
+  color: #d5c4cc;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* SECTION */
+
+.sundaes-section {
+  width: min(1250px, 92%);
+  margin: 0 auto;
+  padding: 80px 0 110px;
+}
+
+.sundaes-section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.sundaes-section-header > span {
+  color: #d991aa;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.sundaes-section-header h2 {
+  margin: 14px 0;
+  font-size: clamp(32px, 4vw, 50px);
+  font-weight: 500;
+}
+
+.sundaes-section-header p {
+  color: #bcaeb4;
+  line-height: 1.7;
+}
+
+/* GRID */
+
+.sundaes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+/* CARD */
+
+.sundae-card {
+  overflow: hidden;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  transition: 0.35s ease;
+}
+
+.sundae-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(231, 165, 188, 0.4);
+}
+
+/* IMAGE */
+
+.sundae-image {
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  background: #2b101d;
+}
+
+.sundae-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.sundae-card:hover .sundae-image img {
+  transform: scale(1.06);
+}
+
+.sundae-heart {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(20, 5, 13, 0.72);
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.sundae-image > span {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  padding: 7px 13px;
+  border-radius: 20px;
+  background: rgba(25, 5, 15, 0.82);
+  color: #f0c3d1;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/* CONTENT */
+
+.sundae-content {
+  padding: 22px;
+}
+
+.sundae-rating {
+  color: #f3b0c5;
+  font-size: 13px;
+  letter-spacing: 3px;
+}
+
+.sundae-rating small {
+  margin-left: 8px;
+  color: #a9959e;
+  letter-spacing: 0;
+}
+
+.sundae-content h3 {
+  margin: 10px 0 8px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.sundae-content p {
+  min-height: 55px;
+  margin: 0;
+  color: #bcaeb4;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* BOTTOM */
+
+.sundae-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 15px;
+  margin-top: 22px;
+}
+
+.sundae-bottom > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.sundae-bottom small {
+  color: #98838d;
+  font-size: 11px;
+}
+
+.sundae-bottom strong {
+  margin-top: 4px;
+  color: #f2b6c9;
+  font-size: 23px;
+}
+
+.sundae-bottom button {
+  border: 0;
+  border-radius: 10px;
+  padding: 11px 17px;
+  background: #8f2850;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sundae-bottom button:hover {
+  background: #b43866;
+  transform: translateY(-2px);
+}
+
+/* MODAL */
+
+.sundae-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  overflow-y: auto;
+  background: rgba(8, 2, 6, 0.84);
+  backdrop-filter: blur(12px);
+}
+
+.sundae-modal {
+  position: relative;
+  width: min(950px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #24101a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.6);
+}
+
+.sundae-close {
+  position: absolute;
+  z-index: 5;
+  top: 18px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.sundae-modal-image {
+  min-height: 600px;
+}
+
+.sundae-modal-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.sundae-modal-content {
+  padding: 45px;
+}
+
+.modal-label {
+  color: #d991aa;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.sundae-modal-content h2 {
+  margin: 12px 0;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.sundae-modal-content > p {
+  color: #bcaeb4;
+  line-height: 1.7;
+}
+
+/* TOPPINGS */
+
+.sundae-option {
+  margin-top: 30px;
+}
+
+.sundae-option h3 {
+  margin-bottom: 14px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sundae-toppings {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.sundae-toppings button {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #eee;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.sundae-toppings button:hover,
+.sundae-toppings button.selected {
+  border-color: #b94c73;
+  background: rgba(143, 40, 80, 0.28);
+}
+
+.sundae-toppings small {
+  color: #e5a5b9;
+}
+
+/* TOTAL */
+
+.sundae-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 32px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sundae-total div {
+  display: flex;
+  flex-direction: column;
+}
+
+.sundae-total small {
+  color: #9d8b94;
+}
+
+.sundae-total strong {
+  color: #f1afc4;
+  font-size: 30px;
+}
+
+.sundae-total > button {
+  border: 0;
+  border-radius: 11px;
+  padding: 14px 22px;
+  background: #a12f59;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sundae-total > button:hover {
+  background: #bd3d68;
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+  .sundaes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sundae-modal {
+    grid-template-columns: 1fr;
+  }
+
+  .sundae-modal-image {
+    min-height: 300px;
+    height: 300px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 620px) {
+  .sundaes-hero {
+    min-height: 380px;
+    padding: 60px 20px;
+  }
+
+  .sundaes-hero h1 {
+    font-size: 43px;
+  }
+
+  .sundaes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sundae-image {
+    height: 250px;
+  }
+
+  .sundae-modal-content {
+    padding: 28px 22px;
+  }
+
+  .sundae-toppings {
+    grid-template-columns: 1fr;
+  }
+
+  .sundae-total {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sundae-total > button {
+    width: 100%;
+  }
+}

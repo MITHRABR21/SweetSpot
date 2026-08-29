@@ -1,0 +1,656 @@
+/* =========================================
+   SWEETSPOT - FALOODA PAGE
+   ========================================= */
+
+.falooda-page {
+  width: 100%;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(122, 24, 68, 0.22), transparent 35%),
+    linear-gradient(135deg, #18060f 0%, #2b0718 45%, #430b28 100%);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.falooda-hero {
+  width: 100%;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 6%;
+  position: relative;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(24, 6, 15, 0.96),
+      rgba(55, 8, 32, 0.75),
+      rgba(24, 6, 15, 0.35)
+    );
+}
+
+.falooda-hero-content {
+  width: 100%;
+  max-width: 1250px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.falooda-label {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #f4c6d9;
+}
+
+.falooda-hero h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(44px, 6vw, 78px);
+  line-height: 1.05;
+  font-weight: 500;
+  color: #fff;
+}
+
+.falooda-hero h1 em {
+  color: #f1a8c7;
+  font-style: italic;
+}
+
+.falooda-hero p {
+  max-width: 700px;
+  margin: 24px auto 0;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #e7cbd7;
+}
+
+/* =========================================
+   FILTER BAR
+   ========================================= */
+
+.falooda-filters {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 28px 6%;
+  background: rgba(20, 5, 13, 0.85);
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.falooda-filters button {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ead6df;
+  padding: 11px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.25s ease;
+}
+
+.falooda-filters button:hover,
+.falooda-filters button.active {
+  background: #9c285d;
+  border-color: #b83b73;
+  color: #fff;
+}
+
+/* =========================================
+   MAIN CONTAINER
+   ========================================= */
+
+.falooda-container {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 70px 5%;
+}
+
+/* =========================================
+   SECTION HEADER
+   ========================================= */
+
+.falooda-section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 50px;
+}
+
+.falooda-section-header span {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #d990b0;
+}
+
+.falooda-section-header h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 500;
+}
+
+.falooda-section-header p {
+  margin-top: 15px;
+  color: #d8becb;
+  line-height: 1.7;
+}
+
+/* =========================================
+   FALOODA GRID
+   ========================================= */
+
+.falooda-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* =========================================
+   CARD
+   ========================================= */
+
+.falooda-card {
+  width: 100%;
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 22px;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.falooda-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(236, 151, 186, 0.45);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================================
+   IMAGE
+   ========================================= */
+
+.falooda-image {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  background: #321020;
+}
+
+.falooda-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.45s ease;
+}
+
+.falooda-card:hover .falooda-image img {
+  transform: scale(1.05);
+}
+
+/* =========================================
+   HEART
+   ========================================= */
+
+.falooda-heart {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(20, 5, 13, 0.7);
+  color: #fff;
+  font-size: 21px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.falooda-heart:hover {
+  background: #a82d64;
+}
+
+/* =========================================
+   CATEGORY
+   ========================================= */
+
+.falooda-category {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  padding: 7px 13px;
+  border-radius: 20px;
+  background: rgba(24, 6, 15, 0.82);
+  color: #f5c6d9;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+/* =========================================
+   CARD CONTENT
+   ========================================= */
+
+.falooda-card-content {
+  width: 100%;
+  padding: 22px;
+}
+
+.falooda-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f3c05f;
+  font-size: 13px;
+}
+
+.falooda-rating small {
+  color: #cdb6c1;
+  font-size: 12px;
+}
+
+.falooda-card-content h3 {
+  margin: 12px 0 8px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.falooda-card-content p {
+  margin: 0;
+  min-height: 54px;
+  color: #cdb8c3;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* =========================================
+   CARD BOTTOM
+   ========================================= */
+
+.falooda-card-bottom {
+  margin-top: 22px;
+  padding-top: 17px;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.falooda-card-bottom div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.falooda-card-bottom small {
+  color: #aa8f9b;
+  font-size: 10px;
+}
+
+.falooda-card-bottom strong {
+  color: #fff;
+  font-size: 22px;
+}
+
+.falooda-card-bottom button {
+  border: none;
+  background: #a52c63;
+  color: #fff;
+  padding: 11px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.25s ease;
+}
+
+.falooda-card-bottom button:hover {
+  background: #c13c77;
+}
+
+/* =========================================
+   MODAL OVERLAY
+   ========================================= */
+
+.falooda-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(8, 2, 6, 0.82);
+  backdrop-filter: blur(8px);
+  overflow-y: auto;
+}
+
+/* =========================================
+   MODAL
+   ========================================= */
+
+.falooda-modal {
+  width: min(1050px, 100%);
+  max-height: 90vh;
+  display: grid;
+  grid-template-columns: 42% 58%;
+  background: #260916;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+}
+
+/* =========================================
+   MODAL IMAGE
+   ========================================= */
+
+.falooda-modal-image {
+  min-height: 600px;
+  background: #351020;
+}
+
+.falooda-modal-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* =========================================
+   MODAL CONTENT
+   ========================================= */
+
+.falooda-modal-content {
+  padding: 42px;
+  overflow-y: auto;
+}
+
+.falooda-modal-label {
+  color: #db8daf;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.falooda-modal-content h2 {
+  margin: 12px 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.falooda-modal-content > p {
+  color: #ccb5c0;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* =========================================
+   CLOSE
+   ========================================= */
+
+.falooda-close {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  z-index: 5;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* =========================================
+   CUSTOM OPTIONS
+   ========================================= */
+
+.falooda-option {
+  margin-top: 28px;
+}
+
+.falooda-option h3 {
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+/* =========================================
+   OPTION GRID
+   ========================================= */
+
+.falooda-option-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.falooda-option-grid button {
+  min-height: 65px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.045);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.falooda-option-grid button.selected {
+  border-color: #c14a7c;
+  background: rgba(174, 43, 102, 0.25);
+}
+
+.falooda-option-grid strong {
+  color: #e69cba;
+  font-size: 12px;
+}
+
+/* =========================================
+   TOPPINGS
+   ========================================= */
+
+.falooda-toppings {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9px;
+}
+
+.falooda-toppings button {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: #eee;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.falooda-toppings button.selected {
+  background: rgba(174, 43, 102, 0.25);
+  border-color: #c14a7c;
+}
+
+.falooda-toppings small {
+  color: #e49bb9;
+}
+
+/* =========================================
+   TOTAL
+   ========================================= */
+
+.falooda-total {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.falooda-total div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.falooda-total small {
+  color: #aa8f9b;
+}
+
+.falooda-total strong {
+  font-size: 30px;
+}
+
+.falooda-total button {
+  border: none;
+  background: #a82d64;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1100px) {
+  .falooda-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .falooda-image {
+    height: 280px;
+  }
+}
+
+/* =========================================
+   MOBILE / SMALL TABLET
+   ========================================= */
+
+@media (max-width: 800px) {
+  .falooda-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .falooda-image {
+    height: 260px;
+  }
+
+  .falooda-modal {
+    grid-template-columns: 1fr;
+    max-height: 92vh;
+  }
+
+  .falooda-modal-image {
+    height: 280px;
+    min-height: 280px;
+  }
+
+  .falooda-modal-content {
+    padding: 28px;
+  }
+}
+
+/* =========================================
+   PHONE
+   ========================================= */
+
+@media (max-width: 560px) {
+  .falooda-hero {
+    min-height: 360px;
+    padding: 60px 20px;
+  }
+
+  .falooda-hero p {
+    font-size: 14px;
+  }
+
+  .falooda-container {
+    padding: 45px 18px;
+  }
+
+  .falooda-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .falooda-image {
+    height: 320px;
+  }
+
+  .falooda-card-content {
+    padding: 20px;
+  }
+
+  .falooda-filters {
+    padding: 20px 15px;
+  }
+
+  .falooda-overlay {
+    padding: 10px;
+  }
+
+  .falooda-modal-content h2 {
+    font-size: 30px;
+  }
+
+  .falooda-option-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .falooda-toppings {
+    grid-template-columns: 1fr;
+  }
+
+  .falooda-total {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .falooda-total button {
+    width: 100%;
+  }
+}

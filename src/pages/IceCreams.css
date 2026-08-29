@@ -1,0 +1,494 @@
+
+/* ================================
+   SWEETSPOT ICE CREAM PAGE
+================================ */
+
+.icecream-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(150, 35, 75, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 90% 30%,
+      rgba(100, 20, 55, 0.2),
+      transparent 35%
+    ),
+    #170812;
+  color: #fff;
+}
+
+/* HERO */
+
+.icecream-hero {
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 6%;
+  background:
+    linear-gradient(
+      rgba(20, 4, 13, 0.55),
+      rgba(20, 4, 13, 0.9)
+    ),
+    url("https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=1800&q=90")
+      center / cover;
+}
+
+.icecream-hero-content {
+  max-width: 800px;
+}
+
+.icecream-label {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #e7a5bc;
+  margin-bottom: 20px;
+}
+
+.icecream-hero h1 {
+  margin: 0;
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 1.05;
+  font-weight: 500;
+}
+
+.icecream-hero h1 em {
+  color: #f2b6c9;
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.icecream-hero p {
+  max-width: 650px;
+  margin: 25px auto 0;
+  color: #d8c7ce;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* FILTERS */
+
+.icecream-filters {
+  width: min(1200px, 90%);
+  margin: 45px auto 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.icecream-filters button {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  color: #e8dbe0;
+  padding: 12px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icecream-filters button:hover,
+.icecream-filters button.active {
+  background: #8f2850;
+  color: white;
+  border-color: #a94468;
+}
+
+/* CONTAINER */
+
+.icecream-container {
+  width: min(1250px, 92%);
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+/* GRID */
+
+.icecream-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+/* CARD */
+
+.icecream-card {
+  overflow: hidden;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.icecream-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(231, 165, 188, 0.4);
+}
+
+/* IMAGE */
+
+.icecream-image {
+  height: 270px;
+  position: relative;
+  overflow: hidden;
+  background: #2b101d;
+}
+
+.icecream-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.icecream-card:hover .icecream-image img {
+  transform: scale(1.06);
+}
+
+.icecream-heart {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(20, 5, 13, 0.7);
+  color: white;
+  font-size: 23px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+
+.icecream-image > span {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  background: rgba(25, 5, 15, 0.8);
+  padding: 7px 13px;
+  border-radius: 20px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #f0c3d1;
+}
+
+/* INFO */
+
+.icecream-info {
+  padding: 22px;
+}
+
+.icecream-rating {
+  color: #f3b0c5;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+.icecream-rating small {
+  margin-left: 8px;
+  color: #a9959e;
+  letter-spacing: 0;
+}
+
+.icecream-info h2 {
+  margin: 10px 0 8px;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.icecream-info p {
+  min-height: 52px;
+  margin: 0;
+  color: #bcaeb4;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* BOTTOM */
+
+.icecream-bottom {
+  margin-top: 22px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.icecream-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.icecream-price small {
+  color: #98838d;
+  font-size: 11px;
+}
+
+.icecream-price strong {
+  margin-top: 4px;
+  font-size: 23px;
+  color: #f2b6c9;
+}
+
+.customize-button {
+  border: 0;
+  background: #8f2850;
+  color: white;
+  padding: 11px 17px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.customize-button:hover {
+  background: #aa3762;
+  transform: translateY(-2px);
+}
+
+/* MODAL OVERLAY */
+
+.icecream-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(8, 2, 6, 0.82);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  overflow-y: auto;
+}
+
+/* MODAL */
+
+.icecream-modal {
+  width: min(950px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  background: #24101a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.6);
+}
+
+.icecream-close {
+  position: absolute;
+  z-index: 5;
+  right: 18px;
+  top: 18px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.icecream-modal-image {
+  min-height: 620px;
+}
+
+.icecream-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.icecream-modal-content {
+  padding: 45px;
+}
+
+.modal-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #d991aa;
+}
+
+.icecream-modal-content h2 {
+  margin: 12px 0;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.icecream-modal-content > p {
+  color: #bcaeb4;
+  line-height: 1.7;
+}
+
+/* OPTIONS */
+
+.custom-option {
+  margin-top: 30px;
+}
+
+.custom-option h3 {
+  margin-bottom: 14px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.scoop-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.scoop-options button,
+.topping {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #eee;
+  border-radius: 10px;
+  padding: 13px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.scoop-options button {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.scoop-options button strong {
+  color: #e9a7bb;
+}
+
+.scoop-options button.selected,
+.topping.selected {
+  border-color: #b94c73;
+  background: rgba(143, 40, 80, 0.28);
+}
+
+.topping-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9px;
+}
+
+.topping {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.topping small {
+  color: #e5a5b9;
+}
+
+/* TOTAL */
+
+.icecream-total {
+  margin-top: 32px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.icecream-total div {
+  display: flex;
+  flex-direction: column;
+}
+
+.icecream-total small {
+  color: #9d8b94;
+}
+
+.icecream-total strong {
+  font-size: 30px;
+  color: #f1afc4;
+}
+
+.icecream-total > button {
+  border: 0;
+  border-radius: 11px;
+  padding: 14px 22px;
+  background: #a12f59;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icecream-total > button:hover {
+  background: #bd3d68;
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+  .icecream-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .icecream-modal {
+    grid-template-columns: 1fr;
+  }
+
+  .icecream-modal-image {
+    height: 300px;
+    min-height: 0;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 620px) {
+  .icecream-hero {
+    min-height: 380px;
+    padding: 60px 20px;
+  }
+
+  .icecream-hero h1 {
+    font-size: 43px;
+  }
+
+  .icecream-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .icecream-container {
+    width: 92%;
+  }
+
+  .icecream-image {
+    height: 250px;
+  }
+
+  .icecream-modal-content {
+    padding: 28px 22px;
+  }
+
+  .scoop-options,
+  .topping-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .icecream-total {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .icecream-total > button {
+    width: 100%;
+  }
+}
+
