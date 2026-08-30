@@ -1,18 +1,37 @@
+
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Routes, Route } from "react-router-dom";
+
+import Cakes from "./pages/Cakes.jsx";
+import IceCreams from "./pages/IceCreams.jsx";
+import Sundaes from "./pages/Sundaes.jsx";
+import Falooda from "./pages/Falooda.jsx";
+
 import "./App.css";
 
-function App() {
+
+/* =========================
+   HOME PAGE
+========================= */
+
+function Home() {
   return (
     <div>
 
-      {/* ================= NAVBAR ================= */}
+      {/* =========================
+          NAVBAR
+      ========================= */}
 
       <header className="navbar">
+
+        {/* LOGO */}
 
         <Link to="/" className="logo">
           Sweet<span>Spot</span>
         </Link>
+
+
+        {/* NAVIGATION */}
 
         <nav>
 
@@ -20,13 +39,10 @@ function App() {
             Home
           </Link>
 
-          <a href="#about">
-            About Us
-          </a>
-
           <Link to="/cakes">
             Cakes
           </Link>
+
 
           {/* ICE CREAM DROPDOWN */}
 
@@ -39,7 +55,7 @@ function App() {
             <div className="dropdown">
 
               <Link to="/icecreams">
-                Ice Creams
+                All Ice Creams
               </Link>
 
               <Link to="/sundaes">
@@ -54,57 +70,61 @@ function App() {
 
           </div>
 
+
+          {/* ABOUT */}
+
+          <a href="#about">
+            About Us
+          </a>
+
+
+          {/* OFFERS */}
+
           <a href="#offers">
             Offers
           </a>
 
-          <a href="#cart">
-            My Cart
-          </a>
-
-          <a href="#orders">
-            Orders
-          </a>
-
-          <a href="#contact">
-            Contact Us
-          </a>
-
         </nav>
 
-        <Link
-          to="/cakes"
+
+        {/* CART */}
+
+        <button
           className="cart-button"
+          onClick={() =>
+            alert("Your cart is currently empty.")
+          }
         >
-          Order Now
-        </Link>
+          🛒 Cart
+        </button>
 
       </header>
 
 
-      {/* ================= HERO ================= */}
+      {/* =========================
+          HERO
+      ========================= */}
 
       <section className="home-hero">
 
         <div className="hero-content">
 
-          <span className="hero-small">
+          <p className="hero-small">
             WELCOME TO SWEETSPOT
-          </span>
+          </p>
 
           <h1>
-            Life is short.
+            Happiness
             <br />
-            Eat something
-            <br />
-            <em>sweet.</em>
+            <em>Made Delicious.</em>
           </h1>
 
           <p>
-            Discover beautifully crafted cakes, creamy
-            ice creams and delicious desserts made with
-            premium ingredients for your sweetest moments.
+            Discover handcrafted cakes, creamy ice creams,
+            indulgent sundaes and refreshing faloodas,
+            made specially to sweeten your moments.
           </p>
+
 
           <div className="hero-buttons">
 
@@ -112,7 +132,7 @@ function App() {
               to="/cakes"
               className="primary-button"
             >
-              Explore Cakes →
+              Explore Cakes
             </Link>
 
             <Link
@@ -129,22 +149,23 @@ function App() {
       </section>
 
 
-      {/* ================= CATEGORIES ================= */}
+      {/* =========================
+          CATEGORIES
+      ========================= */}
 
-      <section
-        className="home-categories"
-        id="about"
-      >
+      <section className="home-categories">
 
         <p>
-          OUR SWEET COLLECTION
+          EXPLORE OUR COLLECTION
         </p>
 
         <h2>
-          Something for Every Sweet Craving
+          Something Sweet for Everyone
         </h2>
 
+
         <div className="category-grid">
+
 
           {/* CAKES */}
 
@@ -153,36 +174,41 @@ function App() {
             className="category-card"
           >
 
-            <span>🍰</span>
+            <span>
+              🎂
+            </span>
 
             <h3>
               Cakes
             </h3>
 
             <p>
-              Beautifully crafted cakes for birthdays,
-              celebrations and special moments.
+              Beautifully crafted cakes for
+              birthdays, celebrations and every
+              special moment.
             </p>
 
           </Link>
 
 
-          {/* ICE CREAM */}
+          {/* ICE CREAMS */}
 
           <Link
             to="/icecreams"
             className="category-card"
           >
 
-            <span>🍨</span>
+            <span>
+              🍦
+            </span>
 
             <h3>
               Ice Creams
             </h3>
 
             <p>
-              Creamy and delicious flavours made
-              for every sweet craving.
+              Creamy and delicious flavours
+              made for every ice cream lover.
             </p>
 
           </Link>
@@ -195,15 +221,17 @@ function App() {
             className="category-card"
           >
 
-            <span>🍧</span>
+            <span>
+              🍨
+            </span>
 
             <h3>
               Sundaes
             </h3>
 
             <p>
-              Scoops of ice cream loaded with
-              delicious sauces and toppings.
+              Scoops of happiness topped with
+              sauces, fruits and delicious toppings.
             </p>
 
           </Link>
@@ -216,7 +244,9 @@ function App() {
             className="category-card"
           >
 
-            <span>🥤</span>
+            <span>
+              🥤
+            </span>
 
             <h3>
               Falooda
@@ -234,270 +264,116 @@ function App() {
       </section>
 
 
-      {/* ================= OFFERS ================= */}
+      {/* =========================
+          ABOUT US
+      ========================= */}
+
+      <section
+        id="about"
+        className="home-categories"
+      >
+
+        <p>
+          ABOUT SWEETSPOT
+        </p>
+
+        <h2>
+          Made With Love
+        </h2>
+
+        <p>
+          At SweetSpot, we believe every celebration
+          deserves something delicious. From handcrafted
+          cakes to creamy ice creams, every dessert is
+          prepared to make your special moments sweeter.
+        </p>
+
+      </section>
+
+
+      {/* =========================
+          OFFERS
+      ========================= */}
 
       <section
         id="offers"
-        style={{
-          padding: "90px 7%",
-          textAlign: "center",
-          background: "#fff0f4"
-        }}
+        className="home-categories"
       >
 
-        <p
-          style={{
-            color: "#a3274e",
-            letterSpacing: "3px",
-            fontSize: "12px",
-            fontWeight: "bold"
-          }}
-        >
-          SWEET DEALS
+        <p>
+          SWEETSPOT SPECIAL
         </p>
 
-        <h2
-          style={{
-            color: "#451020",
-            fontFamily: "Georgia, serif",
-            fontSize: "48px",
-            margin: "15px 0"
-          }}
-        >
-          Sweetness Made
-          <br />
-          <em>Even Better</em>
+        <h2>
+          Special Offers
         </h2>
 
-        <p
-          style={{
-            color: "#765764",
-            fontSize: "17px"
-          }}
-        >
-          Discover our delicious desserts and
-          special offers.
-        </p>
-
-        <Link
-          to="/cakes"
-          className="primary-button"
-          style={{
-            display: "inline-block",
-            marginTop: "25px"
-          }}
-        >
-          Shop Now →
-        </Link>
-
-      </section>
-
-
-      {/* ================= CART ================= */}
-
-      <section
-        id="cart"
-        style={{
-          padding: "90px 7%",
-          textAlign: "center",
-          background: "#fff8fa"
-        }}
-      >
-
-        <p
-          style={{
-            color: "#a3274e",
-            letterSpacing: "3px",
-            fontSize: "12px",
-            fontWeight: "bold"
-          }}
-        >
-          YOUR SWEET BASKET
-        </p>
-
-        <h2
-          style={{
-            color: "#451020",
-            fontFamily: "Georgia, serif",
-            fontSize: "45px"
-          }}
-        >
-          My Cart
-        </h2>
-
-        <p
-          style={{
-            color: "#765764"
-          }}
-        >
-          Your selected desserts will appear here.
-        </p>
-
-        <Link
-          to="/cakes"
-          className="primary-button"
-          style={{
-            display: "inline-block",
-            marginTop: "20px"
-          }}
-        >
-          Start Shopping →
-        </Link>
-
-      </section>
-
-
-      {/* ================= ORDERS ================= */}
-
-      <section
-        id="orders"
-        style={{
-          padding: "90px 7%",
-          textAlign: "center",
-          background: "#4b071c",
-          color: "white"
-        }}
-      >
-
-        <p
-          style={{
-            color: "#f3aec1",
-            letterSpacing: "3px",
-            fontSize: "12px",
-            fontWeight: "bold"
-          }}
-        >
-          SWEETSPOT ORDERS
-        </p>
-
-        <h2
-          style={{
-            fontFamily: "Georgia, serif",
-            fontSize: "45px"
-          }}
-        >
-          Your Orders
-        </h2>
-
-        <p
-          style={{
-            color: "#f9dfe7"
-          }}
-        >
-          Your order history will appear here.
+        <p>
+          Keep an eye out for our seasonal treats,
+          special discounts and delicious dessert offers.
         </p>
 
       </section>
-
-
-      {/* ================= CONTACT ================= */}
-
-      <section
-        id="contact"
-        style={{
-          padding: "90px 7%",
-          textAlign: "center",
-          background: "#fff8fa"
-        }}
-      >
-
-        <p
-          style={{
-            color: "#a3274e",
-            letterSpacing: "3px",
-            fontSize: "12px",
-            fontWeight: "bold"
-          }}
-        >
-          CONTACT US
-        </p>
-
-        <h2
-          style={{
-            color: "#451020",
-            fontFamily: "Georgia, serif",
-            fontSize: "45px"
-          }}
-        >
-          Let's Make Your
-          <br />
-          <em>Moment Sweeter</em>
-        </h2>
-
-        <p
-          style={{
-            color: "#765764",
-            fontSize: "17px"
-          }}
-        >
-          Have a question or a special request?
-          We'd love to hear from you.
-        </p>
-
-        <p
-          style={{
-            color: "#58132a",
-            fontWeight: "bold"
-          }}
-        >
-          📞 +91 98765 43210
-        </p>
-
-        <p
-          style={{
-            color: "#58132a",
-            fontWeight: "bold"
-          }}
-        >
-          ✉ hello@sweetspot.com
-        </p>
-
-      </section>
-
-
-      {/* ================= FOOTER ================= */}
-
-      <footer
-        style={{
-          background: "#2d0411",
-          color: "white",
-          padding: "45px 7%",
-          textAlign: "center"
-        }}
-      >
-
-        <h2
-          style={{
-            fontFamily: "Georgia, serif",
-            fontSize: "30px",
-            margin: "0 0 10px"
-          }}
-        >
-          SweetSpot
-        </h2>
-
-        <p
-          style={{
-            color: "#f3aec1"
-          }}
-        >
-          Every bite tells a sweet story.
-        </p>
-
-        <p
-          style={{
-            marginTop: "25px",
-            fontSize: "13px",
-            color: "#d9a8b7"
-          }}
-        >
-          © 2026 SweetSpot. All rights reserved.
-        </p>
-
-      </footer>
 
     </div>
   );
 }
 
+
+/* =========================
+   MAIN APP
+========================= */
+
+function App() {
+
+  return (
+
+    <Routes>
+
+      {/* HOME */}
+
+      <Route
+        path="/"
+        element={<Home />}
+      />
+
+
+      {/* CAKES */}
+
+      <Route
+        path="/cakes"
+        element={<Cakes />}
+      />
+
+
+      {/* ICE CREAMS */}
+
+      <Route
+        path="/icecreams"
+        element={<IceCreams />}
+      />
+
+
+      {/* SUNDAES */}
+
+      <Route
+        path="/sundaes"
+        element={<Sundaes />}
+      />
+
+
+      {/* FALOODA */}
+
+      <Route
+        path="/falooda"
+        element={<Falooda />}
+      />
+
+    </Routes>
+
+  );
+}
+
+
 export default App;
+
